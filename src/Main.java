@@ -15,9 +15,9 @@ public class Main {
  * - TRY IT FOR FREE:
  * - You can get a FREE basic plan key to test all features directly on RapidAPI:
  * - Get your API Key: https://rapidapi.com/christiandamato487/api/smartfix-email-edge
- * * Feedbacks welcome :)
+ * * Feedback welcome :)
  */
-      // 1. Prepare the JSON payload with a list of emails to validate.
+      //  Prepare the JSON payload with a list of emails to validate.
         String json = """ 
                 {
                 "emails": [
@@ -74,9 +74,10 @@ public class Main {
   ]
 }
         """;
-               
-        HttpClient client = HttpClient.newHttpClient();
 
+        // Initialize native Java HttpClient.
+        HttpClient client = HttpClient.newHttpClient();
+        // Build the POST request.
         HttpRequest request = HttpRequest.newBuilder()
 
                 .uri(URI.create("https://smartfix-email-edge.p.rapidapi.com/validate"))
@@ -86,8 +87,13 @@ public class Main {
                 .POST(HttpRequest.BodyPublishers.ofString(json))
                 .build();
 
-
+        // Send the request and handle the response.
+        System.out.println("Connecting to SmartFix Email Edge...");
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        System.out.println("\n========================================");
+        System.out.println("   SMARTFIX VALIDATION RESULTS");
+        System.out.println("========================================\n");
+        // Clear system out
         System.out.println(response.body()
                 .replace("{", "{\n  ")
                 .replace("}", "\n}")
